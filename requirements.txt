@@ -1,0 +1,5 @@
+Django==5.2.19
+google-genai==3.0.0
+python-dotenv==1.2.4
+waitress==3.0.2
+whitenoise==6.12.0
