@@ -35,7 +35,7 @@ jobs:
         run: python manage.py test --verbosity 2
       - name: Build container
         run: docker build -t inventory-agent:test .
-      - name: Smoke-test container and persistent database
+      - name: Smoke-test container HTTP endpoints
         run: |
           docker run -d --name inventory-ci -p 127.0.0.1:8000:8000 inventory-agent:test
           trap 'docker logs inventory-ci; docker rm -f inventory-ci' EXIT
